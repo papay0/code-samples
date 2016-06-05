@@ -10,12 +10,12 @@ def dfs_iter(graph, start, path=[]):
     Returns:
         path - a list of strings that equal a valid path in the graph
     """
-    q=[start]
-    while q:
-        v = q.pop(0)
+    s=[start]
+    while s:
+        v = s.pop()
         if v not in path:
             path += [v]
-            q += graph[v]
+            s += graph[v]
     return path
 
 def dfs_rec(graph, start, path=[]):
